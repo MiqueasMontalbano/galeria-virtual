@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("././fonts/poppins/Poppins-Regular.ttf"); }
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("././fonts/poppins/Poppins-SemiBold.ttf"); }
+body{
+    background-image: url(img/bg-registration-form-1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 13px;
+    font-family: "Poppins-Regular" !important;
+
+}
+#header{
+    background-color: white !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: -2% ;
+}
+.btn {
+    color: white !important;
+}
+.mb-4{
+    margin-bottom: 0px !important ;
+}
+.nav{
+    background-color: transparent !important;
+}
+/*p{
+    color: green;
+    
+}*/
+
+
+.navbar-toggler-icon{
+
+    margin: 2px;
+    display: inline-block!important;
+    width: 1.5em!important;
+    height: 1.5em!important;
+    border: 2px solid black ;
+    border-radius: 50px;
+    vertical-align: middle!important;
+    background: url(https://cdn-icons-png.flaticon.com/512/32/32195.png);
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: 100%!important;
+}
+.icononav{
+    width: 30px;
+    margin: 10px;
+}
+.icononav:hover{
+    
+}
+.footer{
+    background-color: white;
+}
+
+.tiposarte{
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+}
+.tiposarte li{
+    display: inline-block;
+    text-align: center;
+    padding-left: 2cm;
+    margin: 5px;
+
+}
+.tiposarte li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+
+}
+.tiposarte li a:hover{
+    background-color: black;
+    color: white;
+}
+.tabla{
+    margin: 100px;
+    padding: 50px;
+    caption-side: bottom;
+    border-collapse: collapse;
+    text-align: justify;
+}
+.titulofooter{
+    font-size: x-large;
+    font-weight: 600;
+    font-size: small;
+    text-align:center ;
+}
+.descripfooter{
+    font-size: x-small; 
+    text-align: center;
+    text-align: justify;
+}
+
+td{
+    width: 23%;
+    padding: 30px;
+}
+.cont{
+    text-align: center;
+}
+.footer{
+    font-size: 10px !important;
+}
+.descripfooter{
+    font-size: 10px !important;
+}
+.titulofooter{
+    font-size: 10px !important;
+}
+h10{
+    font-size: 13px !important;
+}
+.col-md-3{
+    font-size: 13px;
+}
+

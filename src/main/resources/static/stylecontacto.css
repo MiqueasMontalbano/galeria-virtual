@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("././fonts/poppins/Poppins-Regular.ttf"); }
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("././fonts/poppins/Poppins-SemiBold.ttf"); }
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins-Regular";
+        
+}
+h2{
+    font-size: 28px;
+}
+h4{
+    font-size: 25px;
+}
+h2, h4{
+    font-weight: 600 !important;
+    text-decoration: underline;
+}
+h5{
+    font-size: 14px !important;
+}
+.row{
+    margin: 30px 30px !important;
+    
+}
+.col{
+    padding: 10px 50px;
+    text-align: center;
+    margin: 10px !important;
+    min-width: 450px !important;
+    font-size: 13px ;
+
+}
+.infocontacto{
+    text-align: left !important;
+    margin: 40px 50px 30px 50px;
+    
+}
+.card{
+
+    box-shadow:
+        inset 0 -3em 3em rgba(0,0,0,0.1), 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    border-radius: 5%;
+
+}
+
+.tarjeta{
+
+    justify-content:center;
+
+}
+
+.form-control{
+    border: 1.5px solid black !important;
+    font-size: 13px;
+}
+#btncontacto{
+    font-size: 13px;
+    font-weight: 600 !important;
+    margin: 15px;
+    background: black !important;
+    border: 1px solid black !important;
+}
+#btncontacto:hover {
+
+
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+.iconos{
+    width: 30px;
+    margin: 5px;
+}
+a{
+    color: black;
+    text-decoration: none !important;
+}
+a:hover {
+    text-decoration: none ;
+}
+.mb-3, p{
+    font-size: 14px;
+    text-align: left;
+}
+.campoobligatorio{
+    font-size: 13px;
+    color: red;
+}

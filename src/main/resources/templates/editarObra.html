@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="././style-altadeobras.css">
+        <link rel="stylesheet" href="././stylenavbar.css">
+        
+        <title>Editar Obra</title>
+    </head>
+    <body>
+
+
+        <div>
+            <h1 th:if="${session.usuariosession != null}" ><div class="containere sticky-top" id="header" th:insert="navbarlogueado.html::navbarlogueado">
+
+                </div></h1>
+            <h1 th:if="${session.usuariosession == null}" ><div class="containere sticky-top" id="header" th:insert="navbar.html::navbar">
+
+                </div></h1>
+
+        </div>
+        <div class="contenedor">
+            <form th:action="@{/obra/editar}" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" th:value="${obra.id}"/>
+                <!--<input type="hidden" name="idUsuario" th:value="${session.usuariosession.id}">-->
+                <p th:text="${errorReg}"></p>
+                <div class="tarjeta">
+                    <div class="card">
+                        <h2>Editar Obra</h2>
+                        <h4 th:text="${exito}"></h4>
+                        <div class="row">
+                            <label for="artista">Artista</label>
+                            <input th:value="${obra.artista}" type="text" name="artista" class="form-control" placeholder="nombre del autor"
+                                   style="font-size:small;">
+                            <div class="col">
+                                <input th:value="${obra.anio}" type="text" name="anio" class="form-control" placeholder="Año de creacion..."
+                                       style="font-size:small;">
+                            </div>
+                            <div class="col">
+                                <input th:value="${obra.titulo}" type="text" name="titulo" class="form-control" placeholder="Como la llamaremos..."
+                                       style="font-size:small;">
+                            </div>
+                            <label for="categoria" class="text">En que categoria se situa? </label>
+                            <select name="categoria">
+                                <option
+                                    th:each="categoria : ${T(com.GaleriaVirtual.entidades.enumeracion.Categoria).values()}"
+                                    th:value="${categoria}" th:text="${categoria.value}">
+                                </option>
+                            </select>
+                            <label for="tamanio">Tamaño disponible</label><br>
+                            <input th:value="${obra.tamanio}" type="text" name="tamanio" class="form-control"
+                                   placeholder="Tamaño disponibles de obras que nos dejas" style="font-size:small;">       
+                            <label for="cantidad">Cantidad de Obras que ingresas</label><br>
+                            <input th:value="${obra.cantidad}" type="number" name="cantidad" class="form-control"
+                                   placeholder="cantidad de obras que nos dejas" style="font-size:small;">
+                            <label for="precio">Precio</label>
+                            <input th:value="${obra.precio}" type="text" class="form-control" name="precio">
+                            <label for="descripcion">Descripcion</label>
+                            <textarea class="form-control" name="descripcion"
+                                      placeholder="Describi tu obra, en pocas palabras...."
+                                      style="width:600px; height:100px; font-size:small;">             
+                            </textarea>
+                            <div class="mb-2">
+                                <label for="formFile" class="form-label">Ingrese un archivo</label>
+                                <input class="form-control" name="archivo" type="file">
+                            </div>
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer" th:insert="navbar.html::footer"></div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
